@@ -1,0 +1,42 @@
+<%- include('partials/header'); -%> 
+
+
+<section class="zalora">
+    <div class="zalora-monitor bd-container">
+        <h1> zalora.com.ph</h1>
+
+        <div class="zalora-product-info">
+        
+                <% zalora.forEach(function(products){ %>
+                    <div class="item">
+
+                        <a href="https://www.zalora.com.ph/<%= products.url %>"><img src="<%= products.imageUrl %>" alt="<%= products.title %>"></a>
+
+                        <div class="item-info">
+
+                            <h3><%= products.title %></h3>  
+                            <span> ₱ <%= products.price %> </span>
+
+                        <div class="size">
+                            <%   products.size.forEach(function(sizes){ %>
+                                
+                                <div class="size-info">
+                                    <span><%= sizes.size %></span> 
+                                    <a href="https://www.zalora.com.ph/<%= products.url %>">[ATC] </a>
+                                </div> 
+                        <% })%>
+                        </div>
+
+                        </div>
+                        
+                    </div>
+                <%  }) %>
+               
+        </div>
+    </div>
+</section>
+
+
+<%- include('partials/footer'); %>
+
+ 

@@ -1,0 +1,34 @@
+<%- include('partials/header'); -%> 
+
+<section class="titan">
+    <div class="titan-monitor bd-container">
+        <div class="top-header">
+            <h1><a href="https://www.titan22.com/new-arrivals.html"></a>Titan22 Monitor</h1>
+        </div>
+
+        <div class="titan-product-info">
+        
+            <% posts.forEach(function(post){ %>
+                    <div class="item">
+                        <a href="<%= post.href %>"><img src="<%= post.src %>" alt="<%= post.title %>"></a>
+               
+                    <div class="item-info">
+
+                        <h3> <%= post.title %></h3>
+                        <div class="item-brand-price">
+                            <span><%= post.brand %></span>
+                            <span><%= post.price %></span>
+                            <span class="status"><%= post.status %></span>
+                        </div>
+                        
+                    </div>
+                </div>
+                <%  }) %>
+        </div>
+    </div>
+</section>
+
+
+<%- include('partials/footer'); %>
+
+

@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.bd-container {
+  max-width: 1440px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.titan {
+  padding-top: 100px;
+}
+
+.titan-product-info {
+  display: flex;
+  flex-wrap: wrap;
+  position: inherit;
+}
+
+.titan-product-info .item {
+  margin: 1rem auto;
+  position: relative;
+  background-color: #fff;
+  padding: 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  bottom: 6px;
+  border-radius: 4px;
+}
+
+.status {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 40%;
+}
+
+.titan-product-info .item {
+  width: 250px;
+}
+
+.titan-product-info .item img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.titan-product-info.item .item-info {
+  text-align: center;
+}
+
+.titan-product-info h3 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.titan-product-info .item-brand-price {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .titan-product-info .item {
+    width: 220px;
+    margin: 0.2rem auto;
+  }
+
+  .titan-product-info h3 {
+    font-size: 0.8rem;
+  }
+}

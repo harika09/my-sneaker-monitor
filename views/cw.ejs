@@ -1,0 +1,47 @@
+<%- include('partials/header'); -%> 
+
+
+<section class="commonwealth">
+    <div class="cw-monitor bd-container">
+        <h1> Commonwealth-ftgg.ph </h1>
+
+        <div class="product-info">
+        
+                <% commonwealth.forEach(function(products){ %>
+                    <div class="item">
+
+                    <a href="https://commonwealth-ftgg.ph/products/<%= products.href %>"><img src="<%= products.src %>" alt="<%= products.title %>"></a>
+
+                    <div class="item-info">
+
+                        <h3><%= products.title %></h3>  
+                        <span> ₱ <%= products.price %> </span>
+
+
+                        <div class="sizes">
+                         
+                                <% products.size.forEach(function(sizes){ %>
+                                    <div class="sizes-info">
+                                        <% status = 'OOS' %>
+                                        <% if(sizes.available === true){ %>
+                                            <span> <%= sizes.title %></span>
+                                            <a href="https://commonwealth-ftgg.ph/cart/add?id=<%= sizes.id %>">[ATC]</a>
+                                        <% } else { %>
+                                            <span> <%= sizes.title %> <%= status %></span>
+                                        <%  } %>    
+                                      
+                                    </div>
+                              <% })%>
+                            
+                        </div>
+
+                    </div>
+                </div>
+                <%  }) %>
+               
+        </div>
+    </div>
+</section>
+
+
+<%- include('partials/footer'); %>

@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.bd-container {
+  max-width: 1440px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.zalora {
+  padding-top: 100px;
+}
+
+.zalora-product-info {
+  display: flex;
+  flex-wrap: wrap;
+  position: inherit;
+}
+
+.zalora-product-info .item {
+  margin: 1rem auto;
+  width: 250px;
+  position: relative;
+  background-color: #fff;
+  padding: 2px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  bottom: 6px;
+  border-radius: 4px;
+}
+
+.zalora-product-info .item img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.zalora-product-info h3 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.zalora-product-info .item-info {
+  text-align: center;
+}
+
+.size {
+  margin-top: 10px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.size .size-info {
+  padding: 0 2px;
+  gap: 5px;
+  display: flex;
+}
+
+.size .size-info span {
+  font-size: 0.9rem;
+}
+
+.size .size-info a {
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: #28527a;
+}
+
+@media screen and (max-width: 600px) {
+  .zalora-product-info .item {
+    width: 220px;
+  }
+
+  .size .size-info span {
+    font-size: 0.7rem;
+  }
+}
